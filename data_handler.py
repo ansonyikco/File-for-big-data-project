@@ -64,3 +64,6 @@ def clean_data(df):
   df.info()
   return df
 
+def prepare_data():
+  df = load_data()
+  return clean_data(df)
