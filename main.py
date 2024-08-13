@@ -2,6 +2,10 @@ import data_handler
 import Stopwords
 import MapReduce
 if __name__== '__main__':
+  df = data_handler.prepare_data()
+  Stopword_list = Stopwords.construct_stopword_list()
+  
+  
   i=0 # assign paper ID for map-reduce process
   process_amount = 10000
   mapped = []
@@ -9,7 +13,7 @@ if __name__== '__main__':
   for each_paper in df['text']:
     #content = df['body_text'][i]
     ids = i
-    word_count = map(each_paper,ids)
+    word_count = MapReduce.map(each_paper,ids,Stopword_list)
     word_index.append(get_representation(word_count))
   
     mapped+=(word_count)
@@ -20,5 +24,5 @@ if __name__== '__main__':
   
     if i>process_amount: # for developer to do early stop
       break
-  sparse_index = reduce(mapped)
-  top_50_list = get_top_50_list(sparse_index)
+  sparse_index = MapReduce.reduce(mapped)
+  top_50_list = MapReduce.get_top_50_list(sparse_index)
