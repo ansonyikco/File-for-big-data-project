@@ -2,7 +2,7 @@ import nltk
 nltk.download('punkt')
 
 
-def map(content,ids):
+def map(content,ids,stopwords):
   #content = 'main body text in string format like this'
   #ids = ID of paper in int format
   #output = [(word 'abc', (title ID : 3, count: 2)),('alkaline', (5, 3))......]
