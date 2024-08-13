@@ -26,3 +26,15 @@ if __name__== '__main__':
       break
   sparse_index = MapReduce.reduce(mapped)
   top_50_list = MapReduce.get_top_50_list(sparse_index)
+
+
+
+  i=0
+  ID_list = []
+  for each in word_index:
+      ID_list.append (i)
+      i+=1
+  Link_list = list(df['link'])[0:process_amount+1]
+  d = {'ID': ID_list,'title':list(df['title']),'Link': Link_list, 'Representation':word_index}
+  df_representation = pd.DataFrame(data=d)
+  
