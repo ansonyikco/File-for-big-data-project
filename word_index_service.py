@@ -5,7 +5,7 @@ def word_retrieve(word,index):
     return [[]]
 
 pd.set_option('max_colwidth', None)
-def word_index_service(df_representation,sparse_index):
+def word_index_service(sparse_index,df_representation):
 
     while True:
       paper_list_for_multi = []
