@@ -1,6 +1,7 @@
 import data_handler
 import Stopwords
 import MapReduce
+import word_index_service
 if __name__== '__main__':
   df = data_handler.prepare_data()
   Stopword_list = Stopwords.construct_stopword_list()
