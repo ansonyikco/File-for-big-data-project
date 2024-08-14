@@ -40,7 +40,33 @@ if __name__== '__main__':
   df_representation = pd.DataFrame(data=d)
 
 
+try:
+    from wordcloud import *
+except:
+    !pip install wordcloud
 
+    from wordcloud import *
+def gen_wordcloud(index):
+
+
+  # Start with one review:
+
+
+  # Create and generate a word cloud image:
+
+  d = {w: f for f, w in
+      (top_50_list)}
+
+  wordcloud = WordCloud(background_color='white', colormap='tab20c', prefer_horizontal=0,width=1000, height=500)
+  wordcloud.generate_from_frequencies(frequencies=d)
+
+  # Display the generated image:
+  plt.figure(figsize=(10,8))
+  plt.imshow(wordcloud, interpolation='bilinear')
+  plt.axis("off")
+  plt.show()
+
+gen_wordcloud(top_50_list)
 word_index_service.word_index_service(sparse_index,df_representation)
 
   
