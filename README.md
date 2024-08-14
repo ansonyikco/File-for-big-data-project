@@ -22,3 +22,5 @@ Presenting the results of text analysis in an engaging, visual format.
 
 The article dataset from kaggle is used as the data source. 
 https://www.kaggle.com/datasets/dorianlazar/medium-articles-dataset
+
+Colab notebook of this project: https://colab.research.google.com/drive/12mhQaxjLFe-mTjnSRiP4dffwbetsz_ou?usp=sharing
