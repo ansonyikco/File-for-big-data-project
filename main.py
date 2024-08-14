@@ -37,4 +37,9 @@ if __name__== '__main__':
   Link_list = list(df['link'])[0:process_amount+1]
   d = {'ID': ID_list,'title':list(df['title']),'Link': Link_list, 'Representation':word_index}
   df_representation = pd.DataFrame(data=d)
+
+
+
+word_index_service.word_index_service(sparse_index,df_representation)
+
   
