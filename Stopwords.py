@@ -18,7 +18,7 @@ def add_custom_stopword(stopwords,custom_stopword):
   print ('added custom stopword')
   return (stopwords)
 
-def construct_stopword_list()
+def construct_stopword_list():
   punctuation = get_punctuation()
   stopwords = get_stopwords()
   custom_stopword = ['t.','al.','study','studies','activity','based','±','patients','production','``',"''",'product','process','','total','follow','high','higher','levels',
